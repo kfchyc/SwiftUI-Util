@@ -67,7 +67,7 @@ struct PageView<Content: View>: View {
                 PageDots(currentIndex: self.$currentIndex, pageCount: self.pageCount)
                     .opacity(self.showPageDots ? 1 : 0)
                     .frame(maxWidth: .infinity, alignment: Alignment(horizontal: self.pageDotsAlignment, vertical: .bottom))
-                    .padding(.horizontal, UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.safeAreaInsets.bottom)
+                    .padding(.horizontal, UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.safeAreaInsets.left)
             }
         }
     }
